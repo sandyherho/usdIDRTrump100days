@@ -1,0 +1,45 @@
+# Bootstrapped Brown-Forsythe Test Analysis of USD/IDR Exchange Rate
+## Analysis of USD/IDR Exchange Rate Variance Before and After Presidential Inauguration (January 20, 2025)
+
+This report presents the results of Brown-Forsythe tests comparing the variance of USD/IDR exchange rates before and after the presidential inauguration on January 20, 2025. The analysis includes bootstrap resampling for robust confidence intervals.
+
+### About Brown-Forsythe Test
+The Brown-Forsythe test is a robust test for homogeneity of variances across groups. Unlike the traditional Levene's test which uses deviations from group means, the Brown-Forsythe test uses deviations from group medians, making it more robust against non-normal distributions and outliers. The test evaluates the null hypothesis that the variances of the groups are equal.
+
+### Bootstrap Analysis
+For each comparison, 10000 bootstrap samples were created by resampling with replacement. This provides more robust estimates and allows calculation of confidence intervals for p-values. A comparison is considered to have "robust significance" if more than 80% of the bootstrap samples reject the null hypothesis (p < 0.05).
+
+## Results
+
+### Analysis by Comparison
+
+                        Comparison  N samples (group 1)  N samples (group 2)  Direct Statistic  Direct p-value  Bootstrap Statistic (mean)  Bootstrap p-value (mean)  Bootstrap p-value (median)  p-value CI lower  p-value CI upper  Rejection ratio  Robust significance  Variance (group 1)  SD (group 1)  Variance (group 2)  SD (group 2)  Variance ratio
+          Pre vs Post Inauguration                   69                   70            0.0003          0.9873                      1.0145                    0.5040                      0.5067            0.0254            0.9758           0.0482                False          63160.1039      251.3167          57230.8563      239.2297          0.9061
+ Pre-Inauguration vs Entire Period                   69                  139           11.9643          0.0007                     13.1576                    0.0089                      0.0005            0.0000            0.0747           0.9603                 True          63160.1039      251.3167         142561.4599      377.5731          2.2571
+Post-Inauguration vs Entire Period                   70                  139           11.8423          0.0007                     13.0603                    0.0079                      0.0006            0.0000            0.0666           0.9641                 True          57230.8563      239.2297         142561.4599      377.5731          2.4910
+
+
+## Interpretation Summary
+
+### Pre-Inauguration vs Post-Inauguration Analysis:
+- Variance of USD/IDR before inauguration: 63160.10 (SD: 251.32)
+- Variance of USD/IDR after inauguration: 57230.86 (SD: 239.23)
+- Variance ratio (post/pre): 0.9061
+- **No robust evidence** - There is no robust evidence that the variance differs between pre and post-inauguration periods (rejection ratio: 0.05, p-value: 0.5040, 95% CI: [0.0254, 0.9758])
+
+
+## Conclusion
+
+This bootstrapped Brown-Forsythe test analysis provides a robust assessment of differences in variance of USD/IDR exchange rates before and after the presidential inauguration on January 20, 2025. The bootstrap resampling approach provides confidence intervals that account for sampling variability, giving a more reliable picture of statistical significance.
+
+The Brown-Forsythe test is particularly well-suited for financial data analysis as it:
+1. Makes no assumptions about the normality of data distribution
+2. Is robust against outliers by using deviations from the median rather than the mean
+3. Specifically tests for differences in variance, which is a key measure of volatility in financial markets
+4. Works well even with unequal sample sizes
+
+Changes in variance before and after a political event like a presidential inauguration can indicate changes in market uncertainty and risk. Higher variance generally suggests greater uncertainty and volatility, while lower variance suggests more stable market conditions.
+
+This analysis may help understand whether the presidential inauguration had a significant impact on the volatility of the USD/IDR exchange rate, which could be useful for understanding political events' impact on currency market stability.
+
+_Note: This analysis focuses on differences in variance. Correlation does not imply causation, and other factors may have influenced exchange rate volatility during this period._

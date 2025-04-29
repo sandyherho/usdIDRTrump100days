@@ -1,0 +1,16 @@
+Period,Test,statistic,p-value,normal
+Pre-Inauguration,Shapiro-Wilk,0.9692158699035645,0.0863848328590393,True
+Pre-Inauguration,Anderson-Darling,0.587795731915179,,False
+Pre-Inauguration,Jarque-Bera,1.0961754282768392,0.5780541589242368,True
+Pre-Inauguration,D'Agostino-Pearson,1.7586871392166539,0.4150552771754693,True
+Pre-Inauguration,Lilliefors,0.08960953928380588,0.6046433395560709,True
+Post-Inauguration,Shapiro-Wilk,0.9168843626976013,0.0001927882112795487,False
+Post-Inauguration,Anderson-Darling,2.759272886347503,,False
+Post-Inauguration,Jarque-Bera,3.3347982957365248,0.1887373056652661,True
+Post-Inauguration,D'Agostino-Pearson,4.253955703287035,0.11919698102494992,True
+Post-Inauguration,Lilliefors,0.19836682664876415,0.006868830166503415,False
+Entire Period,Shapiro-Wilk,0.9774768948554993,0.021260172128677368,False
+Entire Period,Anderson-Darling,1.1732098718952102,,False
+Entire Period,Jarque-Bera,1.0695496059770322,0.5858011959704938,True
+Entire Period,D'Agostino-Pearson,1.141636291296304,0.565062945742044,True
+Entire Period,Lilliefors,0.08486298909559176,0.2547179463927381,True

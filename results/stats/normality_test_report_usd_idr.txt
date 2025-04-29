@@ -1,0 +1,87 @@
+# Robust Normality Tests for USD/IDR Exchange Rate
+## Analysis of USD/IDR Exchange Rate Distribution Before and After Presidential Inauguration (January 20, 2025)
+
+This report presents the results of robust normality tests on USD/IDR exchange rates before and after the presidential inauguration on January 20, 2025.
+
+### About Normality Tests
+Normality is a key assumption in many statistical tests. Testing for normality helps determine whether parametric tests (which assume normal distribution) or non-parametric tests (which don't require normality) are more appropriate for the data. This analysis employs multiple robust normality tests:
+
+1. **Shapiro-Wilk Test**: Effective for sample sizes up to 2000. The null hypothesis is that the data is normally distributed.
+
+2. **Anderson-Darling Test**: Places more weight on the tails of the distribution, making it particularly sensitive to deviations from normality in the tails.
+
+3. **Jarque-Bera Test**: Based on skewness and kurtosis, this test is particularly effective for detecting deviations from normality due to asymmetry or heavy tails.
+
+4. **D'Agostino-Pearson Test**: Combines skewness and kurtosis to form an omnibus test of normality.
+
+5. **Lilliefors Test**: A modification of the Kolmogorov-Smirnov test that is appropriate when the parameters of the normal distribution are estimated from the data.
+
+## Results
+
+### Descriptive Statistics
+
+| Period | Count | Mean | Median | 10% Trimmed Mean | 20% Trimmed Mean | Std Dev | MAD | IQR | Min | Max | Skewness | Kurtosis |
+|--------|-------|------|--------|-----------------|------------------|---------|-----|-----|-----|-----|----------|----------|
+| Pre-Inauguration | 69 | 15892.01 | 15891.30 | 15894.63 | 15892.02 | 251.32 | 178.30 | 338.60 | 15069.40 | 16368.80 | -0.2611 | 0.3294 |
+| Post-Inauguration | 70 | 16465.54 | 16367.25 | 16454.64 | 16432.81 | 239.23 | 135.40 | 413.20 | 15881.20 | 17051.90 | 0.4102 | -0.6858 |
+| Entire Period | 139 | 16180.84 | 16230.90 | 16179.95 | 16173.12 | 377.57 | 291.10 | 481.85 | 15069.40 | 17051.90 | -0.0393 | -0.4225 |
+
+### Normality Test Results
+
+#### Pre-Inauguration
+
+| Test | Statistic | p-value | Normal Distribution? |
+|------|-----------|---------|----------------------|
+| Shapiro-Wilk | 0.9692 | 0.0864 | Yes |
+| Anderson-Darling | 0.5878 | N/A | No |
+| Jarque-Bera | 1.0962 | 0.5781 | Yes |
+| D'Agostino-Pearson | 1.7587 | 0.4151 | Yes |
+| Lilliefors | 0.0896 | 0.6046 | Yes |
+
+#### Post-Inauguration
+
+| Test | Statistic | p-value | Normal Distribution? |
+|------|-----------|---------|----------------------|
+| Shapiro-Wilk | 0.9169 | 0.0002 | No |
+| Anderson-Darling | 2.7593 | N/A | No |
+| Jarque-Bera | 3.3348 | 0.1887 | Yes |
+| D'Agostino-Pearson | 4.2540 | 0.1192 | Yes |
+| Lilliefors | 0.1984 | 0.0069 | No |
+
+#### Entire Period
+
+| Test | Statistic | p-value | Normal Distribution? |
+|------|-----------|---------|----------------------|
+| Shapiro-Wilk | 0.9775 | 0.0213 | No |
+| Anderson-Darling | 1.1732 | N/A | No |
+| Jarque-Bera | 1.0695 | 0.5858 | Yes |
+| D'Agostino-Pearson | 1.1416 | 0.5651 | Yes |
+| Lilliefors | 0.0849 | 0.2547 | Yes |
+
+
+## Interpretation Summary
+
+The normality tests provide a basis for determining whether the USD/IDR exchange rate data follows a normal distribution in each period. This information is crucial for selecting appropriate statistical tests for further analysis:
+
+- **If data is normally distributed**: Parametric tests like t-tests and ANOVA may be appropriate.
+- **If data is not normally distributed**: Non-parametric tests like Mann-Whitney U, Kolmogorov-Smirnov, or Wilcoxon signed-rank tests are more appropriate.
+
+Financial data, including exchange rates, often deviates from normality due to:
+- Excess kurtosis (fat tails)
+- Non-zero skewness (asymmetry)
+- Volatility clustering
+
+The robust descriptive statistics provide additional insights:
+- **Comparison of mean and median**: Large differences indicate asymmetry in the distribution
+- **Trimmed means**: Less sensitive to outliers than the regular mean
+- **MAD and IQR**: Robust measures of dispersion, less sensitive to outliers than standard deviation
+- **Skewness**: Measures the asymmetry of the distribution
+- **Kurtosis**: Measures the heaviness of the tails of the distribution
+
+## Conclusion
+
+This comprehensive normality assessment helps guide the selection of appropriate statistical methods for analyzing USD/IDR exchange rates before and after the presidential inauguration. Based on these results, the appropriate tests for analyzing differences between the periods can be selected.
+
+Given that financial time series data rarely follows a perfect normal distribution, the robust non-parametric tests performed in parallel analyses (Mann-Whitney U, Kolmogorov-Smirnov, and Cliff's Delta) are particularly valuable for reliable comparisons between periods.
+
+_Note: Visualizations of these distributions are available in the accompanying KDE plot and boxplot figures._

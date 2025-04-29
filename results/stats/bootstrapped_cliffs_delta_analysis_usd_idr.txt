@@ -1,0 +1,55 @@
+# Bootstrapped Cliff's Delta Analysis of USD/IDR Exchange Rate
+## Analysis of USD/IDR Exchange Rate Before and After Presidential Inauguration (January 20, 2025)
+
+This report presents the results of Cliff's Delta effect size measure comparing USD/IDR exchange rates before and after the presidential inauguration on January 20, 2025. The analysis includes bootstrap resampling for robust confidence intervals.
+
+### About Cliff's Delta
+Cliff's Delta is a non-parametric effect size measure that quantifies the amount of difference between two groups of observations. The measure ranges from -1 to 1, where:
+- Values near 0 indicate negligible difference between groups
+- Values near 1 indicate that values in the first group tend to be larger than those in the second group
+- Values near -1 indicate that values in the second group tend to be larger than those in the first group
+
+Cliff's Delta is interpreted according to these thresholds:
+- |d| < 0.147: Negligible effect
+- 0.147 ≤ |d| < 0.33: Small effect
+- 0.33 ≤ |d| < 0.474: Medium effect
+- |d| ≥ 0.474: Large effect
+
+### Bootstrap Analysis
+For each comparison, 10000 bootstrap samples were created by resampling with replacement. This provides more robust estimates and allows calculation of confidence intervals for the effect size.
+
+## Results
+
+### Analysis by Comparison
+
+                        Comparison  N samples (group 1)  N samples (group 2)  Cliffs Delta Interpretation  Bootstrap Delta (mean)  Delta CI lower  Delta CI upper  Mean USD_IDR (group 1)  SD USD_IDR (group 1)  Mean USD_IDR (group 2)  SD USD_IDR (group 2)  Percent change
+          Pre vs Post Inauguration                   69                   70       -0.9224          Large                 -0.9224         -0.9727         -0.8571              15892.0145              249.4890              16465.5371              237.5148          3.6089
+ Pre-Inauguration vs Entire Period                   69                  139       -0.4645         Medium                 -0.4646         -0.5944         -0.3292              15892.0145              249.4890              16180.8388              376.2125          1.8174
+Post-Inauguration vs Entire Period                   70                  139        0.4579         Medium                  0.4583          0.3180          0.5874              16465.5371              237.5148              16180.8388              376.2125          1.7595
+
+
+## Interpretation Summary
+
+### Pre-Inauguration vs Post-Inauguration Analysis:
+- Mean USD/IDR before inauguration: 15892.01 (SD: 249.49)
+- Mean USD/IDR after inauguration: 16465.54 (SD: 237.51)
+- Percent change: 3.61%
+- Cliff's Delta: -0.9224 (Large effect), 95% CI: [-0.9727, -0.8571]
+- This negative delta indicates that USD/IDR values tend to be **lower** after the inauguration.
+
+
+## Conclusion
+
+This bootstrapped Cliff's Delta analysis provides a robust assessment of the magnitude of differences in USD/IDR exchange rates before and after the presidential inauguration on January 20, 2025. The bootstrap resampling approach provides confidence intervals that account for sampling variability, giving a more reliable picture of the effect size.
+
+Cliff's Delta is particularly well-suited for financial data analysis as it:
+1. Makes no assumptions about the underlying distributions
+2. Is robust against outliers
+3. Quantifies not just whether there is a difference, but how substantial that difference is
+4. Provides an intuitive measure of how often values in one group exceed values in another group
+
+Unlike hypothesis tests that only tell us if there is a statistically significant difference, Cliff's Delta tells us about the size of that difference, which is often more important for practical decision-making.
+
+This analysis may help understand the magnitude of the presidential inauguration's impact on the USD/IDR exchange rate, which could be useful for understanding political events' impact on currency markets.
+
+_Note: This analysis quantifies the magnitude of differences. Correlation does not imply causation, and other factors may have influenced exchange rate movements during this period._

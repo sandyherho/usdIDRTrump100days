@@ -1,0 +1,49 @@
+USD/IDR Post-Inauguration Exchange Rate Anomaly Analysis
+===========================================================
+Analysis Date: 2025-04-29
+Analysis Period: 2025-01-20 to 2025-04-29
+
+Dataset Statistics:
+------------------
+- Total Observations: 70
+- Mean Exchange Rate: 16465.54
+- Maximum Rate: 17051.90 (on 2025-04-09)
+- Minimum Rate: 15881.20 (on 2025-01-29)
+- Overall Volatility (Std Dev): 239.23
+- Daily Average Return: 0.0354%
+
+Anomaly Detection Results:
+-------------------------
+- Total Anomalies Detected (Ensemble): 4 (5.71%)
+- Anomaly Detection Methods Agreement:
+  - 26 points detected by only 1 method
+  - 1 points detected by 2 methods
+  - 3 points detected by all 3 methods
+
+Individual Method Performance:
+----------------------------
+- IF: 4 anomalies (5.71%)
+- OCSVM: 27 anomalies (38.57%)
+- Stats: 6 anomalies (8.57%)
+
+Anomaly Clustering Analysis:
+--------------------------
+- Number of distinct anomaly clusters: 2
+- Largest consecutive anomaly sequence: 2 days
+- Average anomaly cluster size: 2.00 days
+
+Top 5 Most Significant Anomalies:
+-------------------------------
+1. Date: 2025-01-30, Rate: 16238.00, Score: 1.0000, Methods Agreement: 3.0/3
+2. Date: 2025-01-29, Rate: 15881.20, Score: 0.8314, Methods Agreement: 3.0/3
+3. Date: 2025-04-10, Rate: 16805.50, Score: 0.7093, Methods Agreement: 2.0/3
+4. Date: 2025-04-09, Rate: 17051.90, Score: 0.5295, Methods Agreement: 3.0/3
+
+Recommendations:
+--------------
+1. Investigate key policy announcements or economic events coinciding with detected anomalies
+2. Perform cross-correlation analysis with major economic indicators around anomaly clusters
+3. Consider market sentiment analysis during periods of method consensus on anomalies
+4. Analyze liquidity conditions during detected anomaly periods
+5. Compare detected anomalies with other Southeast Asian currencies to identify regional vs. IDR-specific patterns
+6. Examine the relationship between anomaly clusters and changes in monetary policy

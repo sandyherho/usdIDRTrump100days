@@ -1,0 +1,45 @@
+# Bootstrapped Mann-Whitney U Test Analysis of USD/IDR Exchange Rate
+## Analysis of USD/IDR Exchange Rate Before and After Presidential Inauguration (January 20, 2025)
+
+This report presents the results of Mann-Whitney U tests comparing USD/IDR exchange rates before and after the presidential inauguration on January 20, 2025. The analysis includes bootstrap resampling for robust confidence intervals.
+
+### About Mann-Whitney U Test
+The Mann-Whitney U test is a non-parametric test that assesses whether two independent samples come from the same distribution. Unlike the t-test, it does not assume normal distribution of the data, making it suitable for financial data analysis. The test evaluates whether one distribution is stochastically greater than the other.
+
+### Bootstrap Analysis
+For each comparison, 10000 bootstrap samples were created by resampling with replacement. This provides more robust estimates and allows calculation of confidence intervals for p-values. A comparison is considered to have "robust significance" if more than 80% of the bootstrap samples show a statistically significant difference (p < 0.05).
+
+## Results
+
+### Analysis by Comparison
+
+                        Comparison  N samples (group 1)  N samples (group 2)  Direct U  Direct p-value  Bootstrap U (mean)  Bootstrap p-value (mean)  Bootstrap p-value (median)  p-value CI lower  p-value CI upper  Rejection ratio  Robust significance  Mean USD_IDR (group 1)  SD USD_IDR (group 1)  Mean USD_IDR (group 2)  SD USD_IDR (group 2)  Percent change
+          Pre vs Post Inauguration                   69                   70  187.5000          0.0000            187.4495                    0.0000                      0.0000            0.0000            0.0000           1.0000                 True              15892.0145              249.4890              16465.5371              237.5148          3.6089
+ Pre-Inauguration vs Entire Period                   69                  139 2568.0000          0.0000           2567.3209                    0.0000                      0.0000            0.0000            0.0001           1.0000                 True              15892.0145              249.4890              16180.8388              376.2125          1.8174
+Post-Inauguration vs Entire Period                   70                  139 7092.5000          0.0000           7094.5364                    0.0000                      0.0000            0.0000            0.0002           1.0000                 True              16465.5371              237.5148              16180.8388              376.2125          1.7595
+
+
+## Interpretation Summary
+
+### Pre-Inauguration vs Post-Inauguration Analysis:
+- Mean USD/IDR before inauguration: 15892.01 (SD: 249.49)
+- Mean USD/IDR after inauguration: 16465.54 (SD: 237.51)
+- Percent change: 3.61%
+- **Robust statistical significance** - The difference between pre and post-inauguration periods is statistically significant (rejection ratio: 1.00, p-value: 0.0000, 95% CI: [0.0000, 0.0000])
+
+
+## Conclusion
+
+This bootstrapped Mann-Whitney U test analysis provides a robust assessment of distributional differences in USD/IDR exchange rates before and after the presidential inauguration on January 20, 2025. The bootstrap resampling approach provides confidence intervals that account for sampling variability, giving a more reliable picture of statistical significance.
+
+The Mann-Whitney U test is particularly well-suited for financial data analysis as it:
+1. Makes no assumptions about the normality of data distribution
+2. Is robust against outliers
+3. Detects differences in distribution location (i.e., whether one group tends to have higher or lower values than another)
+4. Works well with small sample sizes
+
+The rejection ratio (proportion of bootstrap samples with p < 0.05) provides a measure of the robustness of the results, with higher values indicating stronger evidence against the null hypothesis of no difference between periods.
+
+This analysis may help understand whether the presidential inauguration had a statistically significant impact on the USD/IDR exchange rate, which could be useful for understanding political events' impact on currency markets.
+
+_Note: This analysis focuses on distributional differences rather than specific effect sizes. Correlation does not imply causation, and other factors may have influenced exchange rate movements during this period._

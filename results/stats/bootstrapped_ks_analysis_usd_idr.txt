@@ -1,0 +1,45 @@
+# Bootstrapped Kolmogorov-Smirnov Test Analysis of USD/IDR Exchange Rate
+## Analysis of USD/IDR Exchange Rate Before and After Presidential Inauguration (January 20, 2025)
+
+This report presents the results of Kolmogorov-Smirnov tests comparing USD/IDR exchange rates before and after the presidential inauguration on January 20, 2025. The analysis includes bootstrap resampling for robust confidence intervals.
+
+### About Kolmogorov-Smirnov Test
+The Kolmogorov-Smirnov test is a non-parametric test that assesses whether two samples come from the same distribution by comparing their cumulative distribution functions. Unlike other tests that focus on specific aspects like central tendency, the KS test is sensitive to differences in shape, spread, and location of the distributions. This makes it particularly valuable for financial data analysis, where the entire distribution matters rather than just the mean or median.
+
+### Bootstrap Analysis
+For each comparison, 10000 bootstrap samples were created by resampling with replacement. This provides more robust estimates and allows calculation of confidence intervals for p-values. A comparison is considered to have "robust significance" if more than 80% of the bootstrap samples show a statistically significant difference (p < 0.05).
+
+## Results
+
+### Analysis by Comparison
+
+                        Comparison  N samples (group 1)  N samples (group 2)  Direct D  Direct p-value  Bootstrap D (mean)  Bootstrap p-value (mean)  Bootstrap p-value (median)  p-value CI lower  p-value CI upper  Rejection ratio  Robust significance  Mean USD_IDR (group 1)  SD USD_IDR (group 1)  Mean USD_IDR (group 2)  SD USD_IDR (group 2)  Percent change
+          Pre vs Post Inauguration                   69                   70    0.8414          0.0000              0.8480                    0.0000                      0.0000            0.0000            0.0000           1.0000                 True              15892.0145              249.4890              16465.5371              237.5148          3.6089
+ Pre-Inauguration vs Entire Period                   69                  139    0.4237          0.0000              0.4400                    0.0000                      0.0000            0.0000            0.0000           1.0000                 True              15892.0145              249.4890              16180.8388              376.2125          1.8174
+Post-Inauguration vs Entire Period                   70                  139    0.4177          0.0000              0.4350                    0.0000                      0.0000            0.0000            0.0000           1.0000                 True              16465.5371              237.5148              16180.8388              376.2125          1.7595
+
+
+## Interpretation Summary
+
+### Pre-Inauguration vs Post-Inauguration Analysis:
+- Mean USD/IDR before inauguration: 15892.01 (SD: 249.49)
+- Mean USD/IDR after inauguration: 16465.54 (SD: 237.51)
+- Percent change: 3.61%
+- **Robust statistical significance** - The distributions of USD/IDR values before and after inauguration are significantly different (rejection ratio: 1.00, p-value: 0.0000, 95% CI: [0.0000, 0.0000])
+
+
+## Conclusion
+
+This bootstrapped Kolmogorov-Smirnov test analysis provides a robust assessment of distributional differences in USD/IDR exchange rates before and after the presidential inauguration on January 20, 2025. The bootstrap resampling approach provides confidence intervals that account for sampling variability, giving a more reliable picture of statistical significance.
+
+The Kolmogorov-Smirnov test is particularly well-suited for financial data analysis as it:
+1. Makes no assumptions about the normality of data distribution
+2. Is sensitive to differences in the entire distribution (shape, spread, and location)
+3. Can detect any type of distributional difference between samples
+4. Provides a more complete picture than tests that focus only on measures of central tendency
+
+The rejection ratio (proportion of bootstrap samples with p < 0.05) provides a measure of the robustness of the results, with higher values indicating stronger evidence against the null hypothesis of no difference between periods.
+
+This analysis may help understand whether the presidential inauguration had a statistically significant impact on the USD/IDR exchange rate distribution, which could be useful for understanding political events' impact on currency markets.
+
+_Note: This analysis focuses on distributional differences. Correlation does not imply causation, and other factors may have influenced exchange rate movements during this period._
