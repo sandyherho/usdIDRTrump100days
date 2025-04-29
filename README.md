@@ -45,16 +45,6 @@ Our analysis employs a robust statistical framework designed specifically for fi
   - Comprehensive normality assessment using multiple tests
   - Ensemble anomaly detection combining machine learning and statistical methods
 
-## Key Findings
-
-Our analysis reveals statistically significant shifts in USD/IDR exchange rate patterns following the US presidential transition, with notable findings including:
-
-1. Robust evidence of distributional differences between pre and post-inauguration periods
-2. Quantifiable changes in exchange rate volatility following the political transition
-3. Identification of specific anomalous market behaviors during the transition period
-4. Effect size measurements indicating practical significance beyond statistical detection
-
-These findings contribute to the understanding of how emerging market currencies respond to major political transitions in the United States.
 
 ## Technical Requirements
 
