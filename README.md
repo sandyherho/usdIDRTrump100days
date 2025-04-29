@@ -1,6 +1,6 @@
 # Supplementary Materials: "Statistical Analysis of USD/IDR Exchange Rate Response to the 2025 US Presidential Transition"
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/975096371.svg)](https://doi.org/10.5281/zenodo.15306342)
 
 ## Citation
 
