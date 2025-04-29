@@ -12,8 +12,7 @@
   volume={XX},
   number={X},
   pages={XXX--XXX},
-  year={2025},
-  publisher={Elsevier}
+  year={2025}
 }
 ```
 
