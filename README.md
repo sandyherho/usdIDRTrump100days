@@ -6,7 +6,7 @@
 
 ```bibtex
 @article{kaban2025analysis,
-  title={{Statistical Analysis of USD/IDR Exchange Rate Response to the 2025 US Presidential Transition}},
+  title={{100-Day Analysis of USD/IDR Exchange Rate Dynamics Around the 2025 U.S. Presidential Inauguration}},
   author={Kaban, S. N. and Nugraha, C. and Herho, S. H. S.},
   journal={xxxx},
   volume={XX},

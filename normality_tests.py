@@ -179,7 +179,7 @@ def create_kde_plot(pre_data, post_data, full_data, output_dir="results/figures"
         sns.kdeplot(full_values, label='Entire Period', alpha=0.7, linewidth=2, linestyle='--')
         
         # Add labels and legend
-        plt.xlabel('USD/IDR Exchange Rate [IDR]', fontsize=16)
+        plt.xlabel('USD/IDR Exchange Rate [IDR per USD]', fontsize=16)
         plt.ylabel('Density', fontsize=16)
         plt.legend(fontsize=13)
         
@@ -240,7 +240,7 @@ def create_boxplot(pre_data, post_data, full_data, output_dir="results/figures",
         
         # Add labels
         plt.xlabel('Period', fontsize=16)
-        plt.ylabel('USD/IDR Exchange Rate [IDR]', fontsize=16)
+        plt.ylabel('USD/IDR Exchange Rate [IDR per USD]', fontsize=16)
         
         # Adjust layout and save
         plt.tight_layout()

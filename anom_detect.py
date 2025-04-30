@@ -142,7 +142,7 @@ def generate_visualization(df):
                marker='o', edgecolor='white', linewidth=1.5)
     
     # Cleaner formatting for plot 1 - REMOVED date labels from top plot
-    ax1.set_ylabel('Exchange Rate [IDR per USD]', fontsize=16, fontweight='bold')
+    ax1.set_ylabel('USD/IDR Exchange Rate [IDR per USD]', fontsize=16, fontweight='bold')
     # Set the legend with 'best' option
     ax1.legend(loc='best', frameon=True, framealpha=0.9, fontsize=12)
     ax1.tick_params(axis='both', which='major', labelsize=11)

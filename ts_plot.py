@@ -53,7 +53,7 @@ plt.axvline(x=inauguration_date, color='red', linestyle='--', linewidth=1.5,
 # Format axes
 plt.grid(True, linestyle='--', alpha=0.7)
 plt.xlabel('Date', fontsize=16)
-plt.ylabel('USD/IDR Exchange Rate [IDR]', fontsize=16)
+plt.ylabel('USD/IDR Exchange Rate [IDR per USD]', fontsize=16)
 
 # Format x-axis dates
 plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m'))
